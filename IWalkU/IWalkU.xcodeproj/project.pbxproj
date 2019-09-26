@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330F3BC32330D8F300DD5823 /* SeoulMainParkList.json in Resources */ = {isa = PBXBuildFile; fileRef = 330F3BC22330D8F200DD5823 /* SeoulMainParkList.json */; };
 		C58DC2A2232E4C17008D156D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58DC2A1232E4C17008D156D /* AppDelegate.swift */; };
 		C58DC2A4232E4C17008D156D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58DC2A3232E4C17008D156D /* ViewController.swift */; };
 		C58DC2A7232E4C17008D156D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58DC2A5232E4C17008D156D /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		330F3BC22330D8F200DD5823 /* SeoulMainParkList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SeoulMainParkList.json; path = ../../../../../Downloads/SeoulMainParkList.json; sourceTree = "<group>"; };
 		C58DC29E232E4C17008D156D /* IWalkU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IWalkU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58DC2A1232E4C17008D156D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C58DC2A3232E4C17008D156D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				C58DC2A3232E4C17008D156D /* ViewController.swift */,
 				C58DC2A5232E4C17008D156D /* Main.storyboard */,
 				C58DC2A8232E4C1B008D156D /* Assets.xcassets */,
+				330F3BC22330D8F200DD5823 /* SeoulMainParkList.json */,
 				C58DC2AA232E4C1B008D156D /* LaunchScreen.storyboard */,
 				C58DC2AD232E4C1B008D156D /* Info.plist */,
 			);
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C58DC2AC232E4C1B008D156D /* LaunchScreen.storyboard in Resources */,
+				330F3BC32330D8F300DD5823 /* SeoulMainParkList.json in Resources */,
 				C58DC2A9232E4C1B008D156D /* Assets.xcassets in Resources */,
 				C58DC2A7232E4C17008D156D /* Main.storyboard in Resources */,
 			);

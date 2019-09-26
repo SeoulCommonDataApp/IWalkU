@@ -417,7 +417,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tcP-0u-gkE">
-                                                    <rect key="frame" x="10" y="15" width="138" height="162.5"/>
+                                                    <rect key="frame" x="10" y="15.5" width="138" height="162.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -631,14 +631,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I WALK U 로고 자리" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="jzT-Oz-i77">
-                                <rect key="frame" x="134" y="89" width="146" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I WALK U 로고 자리" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="jzT-Oz-i77">
+                                <rect key="frame" x="134" y="44" width="146" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jw5-KE-sjM">
-                                <rect key="frame" x="20" y="211" width="374" height="587"/>
+                                <rect key="frame" x="20" y="322" width="374" height="476"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -648,25 +648,18 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SVT-MK-vlA" id="MK0-1i-FYM">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="381.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vj6-z3-yEq">
-                                                    <rect key="frame" x="0.0" y="11" width="374" height="381.5"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="vj6-z3-yEq" firstAttribute="height" secondItem="MK0-1i-FYM" secondAttribute="height" id="BAc-J6-oRj"/>
-                                                <constraint firstItem="vj6-z3-yEq" firstAttribute="top" secondItem="MK0-1i-FYM" secondAttribute="topMargin" id="FrV-Fj-jiK"/>
-                                                <constraint firstItem="vj6-z3-yEq" firstAttribute="centerX" secondItem="MK0-1i-FYM" secondAttribute="centerX" id="TzR-Rj-T8J"/>
-                                                <constraint firstItem="vj6-z3-yEq" firstAttribute="width" secondItem="MK0-1i-FYM" secondAttribute="width" id="ekK-Lg-ZIc"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" placeholder="공원을 검색해보세요" translatesAutoresizingMaskIntoConstraints="NO" id="eER-8C-aHm">
-                                <rect key="frame" x="24" y="143" width="370" height="56"/>
+                            <searchBar contentMode="redraw" misplaced="YES" placeholder="공원을 검색해보세요" translatesAutoresizingMaskIntoConstraints="NO" id="eER-8C-aHm">
+                                <rect key="frame" x="22" y="99" width="370" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vj6-z3-yEq">
+                                <rect key="frame" x="20" y="155" width="372" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92540278710000001" blue="0.13161068640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
