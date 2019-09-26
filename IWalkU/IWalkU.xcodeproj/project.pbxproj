@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		330F3BC32330D8F300DD5823 /* SeoulMainParkList.json in Resources */ = {isa = PBXBuildFile; fileRef = 330F3BC22330D8F200DD5823 /* SeoulMainParkList.json */; };
+		33E326E6233C8533006E98AC /* SeoulMainPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E326E5233C8533006E98AC /* SeoulMainPark.swift */; };
+		33E326E8233C88E9006E98AC /* ParkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E326E7233C88E9006E98AC /* ParkViewController.swift */; };
+		33E326EB233C8D58006E98AC /* SeoulMainParkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E326EA233C8D58006E98AC /* SeoulMainParkDataSource.swift */; };
+		33E326ED233C9058006E98AC /* ParkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E326EC233C9058006E98AC /* ParkTableViewCell.swift */; };
 		C58DC2A2232E4C17008D156D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58DC2A1232E4C17008D156D /* AppDelegate.swift */; };
 		C58DC2A4232E4C17008D156D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58DC2A3232E4C17008D156D /* ViewController.swift */; };
 		C58DC2A7232E4C17008D156D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58DC2A5232E4C17008D156D /* Main.storyboard */; };
@@ -17,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		330F3BC22330D8F200DD5823 /* SeoulMainParkList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SeoulMainParkList.json; path = ../../../../../Downloads/SeoulMainParkList.json; sourceTree = "<group>"; };
+		33E326E5233C8533006E98AC /* SeoulMainPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulMainPark.swift; sourceTree = "<group>"; };
+		33E326E7233C88E9006E98AC /* ParkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkViewController.swift; sourceTree = "<group>"; };
+		33E326EA233C8D58006E98AC /* SeoulMainParkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulMainParkDataSource.swift; sourceTree = "<group>"; };
+		33E326EC233C9058006E98AC /* ParkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTableViewCell.swift; sourceTree = "<group>"; };
 		C58DC29E232E4C17008D156D /* IWalkU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IWalkU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58DC2A1232E4C17008D156D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C58DC2A3232E4C17008D156D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +45,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33E326E4233C8516006E98AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33E326E5233C8533006E98AC /* SeoulMainPark.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33E326E9233C8D31006E98AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33E326EA233C8D58006E98AC /* SeoulMainParkDataSource.swift */,
+				33E326EC233C9058006E98AC /* ParkTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C58DC295232E4C17008D156D = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +81,8 @@
 		C58DC2A0232E4C17008D156D /* IWalkU */ = {
 			isa = PBXGroup;
 			children = (
+				33E326E9233C8D31006E98AC /* View */,
+				33E326E4233C8516006E98AC /* Model */,
 				C58DC2A1232E4C17008D156D /* AppDelegate.swift */,
 				C58DC2A3232E4C17008D156D /* ViewController.swift */,
 				C58DC2A5232E4C17008D156D /* Main.storyboard */,
@@ -63,6 +90,7 @@
 				330F3BC22330D8F200DD5823 /* SeoulMainParkList.json */,
 				C58DC2AA232E4C1B008D156D /* LaunchScreen.storyboard */,
 				C58DC2AD232E4C1B008D156D /* Info.plist */,
+				33E326E7233C88E9006E98AC /* ParkViewController.swift */,
 			);
 			path = IWalkU;
 			sourceTree = "<group>";
@@ -139,8 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E326E8233C88E9006E98AC /* ParkViewController.swift in Sources */,
 				C58DC2A4232E4C17008D156D /* ViewController.swift in Sources */,
 				C58DC2A2232E4C17008D156D /* AppDelegate.swift in Sources */,
+				33E326ED233C9058006E98AC /* ParkTableViewCell.swift in Sources */,
+				33E326E6233C8533006E98AC /* SeoulMainPark.swift in Sources */,
+				33E326EB233C8D58006E98AC /* SeoulMainParkDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
