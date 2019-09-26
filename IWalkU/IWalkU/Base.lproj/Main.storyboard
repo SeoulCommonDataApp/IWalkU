@@ -626,7 +626,7 @@
         <!--Item 1-->
         <scene sceneID="FMy-Ba-vdu">
             <objects>
-                <viewController id="OFk-WH-lKi" sceneMemberID="viewController">
+                <viewController id="OFk-WH-lKi" customClass="ParkViewController" customModule="IWalkU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nVa-XY-8AI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -642,13 +642,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="382" id="SVT-MK-vlA">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="382"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="parkTableViewCell" rowHeight="68" id="SVT-MK-vlA" customClass="ParkTableViewCell" customModule="IWalkU" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SVT-MK-vlA" id="MK0-1i-FYM">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="381.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V64-o0-8wL">
+                                                    <rect key="frame" x="56" y="23" width="298" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="V64-o0-8wL" id="JGc-k4-kEr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -659,6 +671,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vj6-z3-yEq">
                                 <rect key="frame" x="20" y="155" width="372" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.062745098040000002" green="1" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92540278710000001" blue="0.13161068640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -675,6 +688,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="onl-or-fQq"/>
                     <connections>
+                        <outlet property="parkTableView" destination="Jw5-KE-sjM" id="2OC-t8-RTe"/>
                         <outlet property="searchDisplayController" destination="M59-hS-Q2v" id="Ycu-t1-2JS"/>
                     </connections>
                 </viewController>
