@@ -12,34 +12,35 @@ class WeatherReceiver{
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
     var weatherDTO: WeatherDTO!
+
     func recevieWeatherDTO(_ url: String = ApiURL.darkSkyWeather.description,
                           key: String,
                           latitude: Double = SeoulStandardCoordinate.latitude.rawValue,
                           longitude: Double = SeoulStandardCoordinate.longitude.rawValue,
                           language: String = Lang.ko.rawValue,
-                          units: String = Units.ca.rawValue
-                          ) -> WeatherDTO? {
-       let basicWeatherUrl = "\(url)/\(key)/\(latitude),\(longitude)"
+                          units: String = Units.ca.rawValue,
+                          excludeInfo: String = "exclude=flag,hourly") -> WeatherDTO? {
+        let basicWeatherUrl = "\(url)/\(key)/\(latitude),\(longitude)"
        
-       var urlComponents = URLComponents(string: basicWeatherUrl)!
-        urlComponents.query = "exclude=flag,hourly&lang=\(language)&units=\(units)"
+        var urlComponents = URLComponents(string: basicWeatherUrl)!
+        urlComponents.query = "\(excludeInfo)&lang=\(language)&units=\(units)"
         
-       guard let componentURL = urlComponents.url else{
-           return nil
-       }
+        guard let componentURL = urlComponents.url else{
+            return nil
+        }
        
-       dataTask = defaultSession.dataTask(with: componentURL) { [weak self] data, response, error in
-           defer {
+        dataTask = defaultSession.dataTask(with: componentURL) { [weak self] data, response, error in
+            defer {
                self?.dataTask = nil
-           }
-           if let responseError = error {
+            }
+            if let responseError = error {
                       print("network error occured : \(responseError)")
             }else if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
                 let decoder = JSONDecoder.init()
                 guard let decodedJSONObject = try? decoder.decode(WeatherDTO.self, from: data) else {
-                       print("data : \(data)")
-                       print("convert error ")
-                       return
+                   print("data : \(data)")
+                   print("convert error ")
+                   return
                 }
                 self?.weatherDTO = decodedJSONObject
                 let encoder = JSONEncoder()

@@ -1,5 +1,5 @@
 //
-//  UIWeatherViewController.swift
+//  UITab3ViewController.swift
 //  IWalkU
 //
 //  Created by hw on 27/09/2019.
@@ -8,14 +8,22 @@
 
 import UIKit
 
-class UIWeatherViewController: UIViewController {
+@available(iOS 13.0, *)
+class UITab3ViewController: UIViewController {
 
+    @IBAction func MoreButton(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "Weather", bundle: nil)
+        guard let detailWeatherViewController = storyboard.instantiateViewController(identifier: "UIWeatherViewController") as? UIWeatherViewController else {
+            return
+        }
+        present(detailWeatherViewController, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
 
     }
-
+    
 
     /*
     // MARK: - Navigation
