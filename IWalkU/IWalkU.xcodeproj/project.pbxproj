@@ -16,9 +16,10 @@
 		C58DC2A7232E4C17008D156D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58DC2A5232E4C17008D156D /* Main.storyboard */; };
 		C58DC2A9232E4C1B008D156D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C58DC2A8232E4C1B008D156D /* Assets.xcassets */; };
 		C58DC2AC232E4C1B008D156D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58DC2AA232E4C1B008D156D /* LaunchScreen.storyboard */; };
+		C58E2E64233DEC8F00560971 /* UITab3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58E2E63233DEC8F00560971 /* UITab3ViewController.swift */; };
+		C58E2E66233DF03800560971 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58E2E65233DF03800560971 /* WeatherTableViewCell.swift */; };
 		C5E76FA8233CB34000CB72FB /* SeoulMainParkList.json in Resources */ = {isa = PBXBuildFile; fileRef = C5E76FA7233CB34000CB72FB /* SeoulMainParkList.json */; };
 		C5E76FB7233DDE7A00CB72FB /* UIWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FB5233DDE7A00CB72FB /* UIWeatherViewController.swift */; };
-		C5E76FB8233DDE7A00CB72FB /* UIWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5E76FB6233DDE7A00CB72FB /* UIWeatherViewController.xib */; };
 		C5E76FBA233DDFB600CB72FB /* WeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FB9233DDFB600CB72FB /* WeatherDTO.swift */; };
 		C5E76FBE233DDFD800CB72FB /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FBD233DDFD800CB72FB /* Daily.swift */; };
 		C5E76FC0233DDFE300CB72FB /* Hourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FBF233DDFE300CB72FB /* Hourly.swift */; };
@@ -30,6 +31,7 @@
 		C5E76FD2233DE66900CB72FB /* SeoulWeatherQualityAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FD1233DE66900CB72FB /* SeoulWeatherQualityAPIs.swift */; };
 		C5E76FD6233DE72300CB72FB /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FD5233DE72300CB72FB /* Units.swift */; };
 		C5E76FD8233DE72B00CB72FB /* SeoulStandardCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FD7233DE72B00CB72FB /* SeoulStandardCoordinate.swift */; };
+		C5E76FDA233DEA5B00CB72FB /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E76FD9233DEA5B00CB72FB /* Weather.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,9 +46,10 @@
 		C58DC2A8232E4C1B008D156D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C58DC2AB232E4C1B008D156D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C58DC2AD232E4C1B008D156D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C58E2E63233DEC8F00560971 /* UITab3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITab3ViewController.swift; sourceTree = "<group>"; };
+		C58E2E65233DF03800560971 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		C5E76FA7233CB34000CB72FB /* SeoulMainParkList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SeoulMainParkList.json; sourceTree = "<group>"; };
 		C5E76FB5233DDE7A00CB72FB /* UIWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWeatherViewController.swift; sourceTree = "<group>"; };
-		C5E76FB6233DDE7A00CB72FB /* UIWeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIWeatherViewController.xib; sourceTree = "<group>"; };
 		C5E76FB9233DDFB600CB72FB /* WeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDTO.swift; sourceTree = "<group>"; };
 		C5E76FBD233DDFD800CB72FB /* Daily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
 		C5E76FBF233DDFE300CB72FB /* Hourly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hourly.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		C5E76FD1233DE66900CB72FB /* SeoulWeatherQualityAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulWeatherQualityAPIs.swift; sourceTree = "<group>"; };
 		C5E76FD5233DE72300CB72FB /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		C5E76FD7233DE72B00CB72FB /* SeoulStandardCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulStandardCoordinate.swift; sourceTree = "<group>"; };
+		C5E76FD9233DEA5B00CB72FB /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,17 +115,27 @@
 				C5E76FA7233CB34000CB72FB /* SeoulMainParkList.json */,
 				33E326E9233C8D31006E98AC /* View */,
 				33E326E4233C8516006E98AC /* Model */,
+				C58E2E67233DF86900560971 /* Tab3 */,
 				C58DC2A1232E4C17008D156D /* AppDelegate.swift */,
 				C58DC2A3232E4C17008D156D /* ViewController.swift */,
 				C58DC2A5232E4C17008D156D /* Main.storyboard */,
 				C58DC2A8232E4C1B008D156D /* Assets.xcassets */,
 				C58DC2AA232E4C1B008D156D /* LaunchScreen.storyboard */,
-				C5E76FB5233DDE7A00CB72FB /* UIWeatherViewController.swift */,
-				C5E76FB6233DDE7A00CB72FB /* UIWeatherViewController.xib */,
 				C58DC2AD232E4C1B008D156D /* Info.plist */,
 				33E326E7233C88E9006E98AC /* ParkViewController.swift */,
 			);
 			path = IWalkU;
+			sourceTree = "<group>";
+		};
+		C58E2E67233DF86900560971 /* Tab3 */ = {
+			isa = PBXGroup;
+			children = (
+				C58E2E63233DEC8F00560971 /* UITab3ViewController.swift */,
+				C5E76FD9233DEA5B00CB72FB /* Weather.storyboard */,
+				C58E2E65233DF03800560971 /* WeatherTableViewCell.swift */,
+				C5E76FB5233DDE7A00CB72FB /* UIWeatherViewController.swift */,
+			);
+			path = Tab3;
 			sourceTree = "<group>";
 		};
 		C5E76FAE233DDDD000CB72FB /* Weather */ = {
@@ -241,8 +255,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C58DC2AC232E4C1B008D156D /* LaunchScreen.storyboard in Resources */,
+				C5E76FDA233DEA5B00CB72FB /* Weather.storyboard in Resources */,
 				C5E76FA8233CB34000CB72FB /* SeoulMainParkList.json in Resources */,
-				C5E76FB8233DDE7A00CB72FB /* UIWeatherViewController.xib in Resources */,
 				C58DC2A9232E4C1B008D156D /* Assets.xcassets in Resources */,
 				C58DC2A7232E4C17008D156D /* Main.storyboard in Resources */,
 			);
@@ -255,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58E2E66233DF03800560971 /* WeatherTableViewCell.swift in Sources */,
 				C5E76FC0233DDFE300CB72FB /* Hourly.swift in Sources */,
 				C5E76FC9233DE24400CB72FB /* SeoulAirQualityReceiver.swift in Sources */,
 				33E326E8233C88E9006E98AC /* ParkViewController.swift in Sources */,
@@ -265,6 +280,7 @@
 				C5E76FD6233DE72300CB72FB /* Units.swift in Sources */,
 				C5E76FB7233DDE7A00CB72FB /* UIWeatherViewController.swift in Sources */,
 				C5E76FBA233DDFB600CB72FB /* WeatherDTO.swift in Sources */,
+				C58E2E64233DEC8F00560971 /* UITab3ViewController.swift in Sources */,
 				C58DC2A4232E4C17008D156D /* ViewController.swift in Sources */,
 				C5E76FC7233DE06200CB72FB /* SeoulAirPollutionInfo.swift in Sources */,
 				C5E76FD2233DE66900CB72FB /* SeoulWeatherQualityAPIs.swift in Sources */,

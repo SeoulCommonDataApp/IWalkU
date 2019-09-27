@@ -11,7 +11,7 @@
         <!--Item-->
         <scene sceneID="WBx-r5-6Kw">
             <objects>
-                <viewController id="ntH-VZ-djN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UITab3ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ntH-VZ-djN" customClass="UITab3ViewController" customModule="IWalkU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aNm-xG-RoC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,6 +148,7 @@
                                 <rect key="frame" x="142" y="448" width="39" height="30"/>
                                 <state key="normal" title="더보기"/>
                                 <connections>
+                                    <action selector="MoreButton:" destination="ntH-VZ-djN" eventType="touchUpInside" id="Dc5-4H-Fn4"/>
                                     <segue destination="xki-dO-cAs" kind="show" id="eRk-k1-mOv"/>
                                 </connections>
                             </button>
