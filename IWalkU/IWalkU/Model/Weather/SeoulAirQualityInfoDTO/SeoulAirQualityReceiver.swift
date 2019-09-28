@@ -31,23 +31,23 @@ class SeoulAirQualityReceiver {
                 self?.dataTask = nil
             }
             if let responseError = error {
-                print("network error occured : \(responseError.localizedDescription)")
+
              }else if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
                  let decoder = JSONDecoder.init()
                  guard let decodedJSONObject = try? decoder.decode(SeoulAirPollutionInfo.self, from: data) else {
                         return
                  }
              self?.airQualityInfo = decodedJSONObject
-             let encoder = JSONEncoder()
-             encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-             do {
-                 let jsonData = try encoder.encode(self?.airQualityInfo!)
-                if let jsonString = String(data: jsonData, encoding: .utf8) {
-                    print(jsonString)
-                }
-                }catch{
-                    print("encode error")
-                }
+//             let encoder = JSONEncoder()
+//             encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+//             do {
+//                 let jsonData = try encoder.encode(self?.airQualityInfo!)
+//                if let jsonString = String(data: jsonData, encoding: .utf8) {
+//                    print(jsonString)
+//                }
+//                }catch{
+//                    print("encode error")
+//                }
             }
         }
         dataTask?.resume()
