@@ -18,6 +18,8 @@
 		C58DC2AC232E4C1B008D156D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58DC2AA232E4C1B008D156D /* LaunchScreen.storyboard */; };
 		C58E2E64233DEC8F00560971 /* UITab3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58E2E63233DEC8F00560971 /* UITab3ViewController.swift */; };
 		C58E2E66233DF03800560971 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58E2E65233DF03800560971 /* WeatherTableViewCell.swift */; };
+		C58E2E6B233E0D4B00560971 /* UnixTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58E2E6A233E0D4B00560971 /* UnixTimeFormatter.swift */; };
+		C58E2E6E233EEFF000560971 /* CurrentlyWeatherVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58E2E6D233EEFF000560971 /* CurrentlyWeatherVO.swift */; };
 		C5E76FA8233CB34000CB72FB /* SeoulMainParkList.json in Resources */ = {isa = PBXBuildFile; fileRef = C5E76FA7233CB34000CB72FB /* SeoulMainParkList.json */; };
 		C5E76FB7233DDE7A00CB72FB /* UIWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FB5233DDE7A00CB72FB /* UIWeatherViewController.swift */; };
 		C5E76FBA233DDFB600CB72FB /* WeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FB9233DDFB600CB72FB /* WeatherDTO.swift */; };
@@ -48,6 +50,8 @@
 		C58DC2AD232E4C1B008D156D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C58E2E63233DEC8F00560971 /* UITab3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITab3ViewController.swift; sourceTree = "<group>"; };
 		C58E2E65233DF03800560971 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		C58E2E6A233E0D4B00560971 /* UnixTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixTimeFormatter.swift; sourceTree = "<group>"; };
+		C58E2E6D233EEFF000560971 /* CurrentlyWeatherVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentlyWeatherVO.swift; sourceTree = "<group>"; };
 		C5E76FA7233CB34000CB72FB /* SeoulMainParkList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SeoulMainParkList.json; sourceTree = "<group>"; };
 		C5E76FB5233DDE7A00CB72FB /* UIWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWeatherViewController.swift; sourceTree = "<group>"; };
 		C5E76FB9233DDFB600CB72FB /* WeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDTO.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		C5E76FAE233DDDD000CB72FB /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				C58E2E6A233E0D4B00560971 /* UnixTimeFormatter.swift */,
 				C5E76FCA233DE2B200CB72FB /* enums */,
 				C5E76FC4233DE01D00CB72FB /* SeoulAirQualityInfoDTO */,
 				C5E76FC3233DDFFE00CB72FB /* DarkSkyWeatherDTO */,
@@ -153,6 +158,7 @@
 			children = (
 				C5E76FCD233DE55D00CB72FB /* WeatherReceiver.swift */,
 				C5E76FB9233DDFB600CB72FB /* WeatherDTO.swift */,
+				C58E2E6D233EEFF000560971 /* CurrentlyWeatherVO.swift */,
 				C5E76FBD233DDFD800CB72FB /* Daily.swift */,
 				C5E76FBF233DDFE300CB72FB /* Hourly.swift */,
 				C5E76FC1233DDFF300CB72FB /* Currently.swift */,
@@ -283,12 +289,14 @@
 				C58E2E64233DEC8F00560971 /* UITab3ViewController.swift in Sources */,
 				C58DC2A4232E4C17008D156D /* ViewController.swift in Sources */,
 				C5E76FC7233DE06200CB72FB /* SeoulAirPollutionInfo.swift in Sources */,
+				C58E2E6E233EEFF000560971 /* CurrentlyWeatherVO.swift in Sources */,
 				C5E76FD2233DE66900CB72FB /* SeoulWeatherQualityAPIs.swift in Sources */,
 				C5E76FD8233DE72B00CB72FB /* SeoulStandardCoordinate.swift in Sources */,
 				C58DC2A2232E4C17008D156D /* AppDelegate.swift in Sources */,
 				33E326ED233C9058006E98AC /* ParkTableViewCell.swift in Sources */,
 				33E326E6233C8533006E98AC /* SeoulMainPark.swift in Sources */,
 				33E326EB233C8D58006E98AC /* SeoulMainParkDataSource.swift in Sources */,
+				C58E2E6B233E0D4B00560971 /* UnixTimeFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

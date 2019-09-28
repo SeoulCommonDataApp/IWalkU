@@ -19,43 +19,36 @@ class WeatherReceiver{
                           longitude: Double = SeoulStandardCoordinate.longitude.rawValue,
                           language: String = Lang.ko.rawValue,
                           units: String = Units.ca.rawValue,
-                          excludeInfo: String = "exclude=flag,hourly") -> WeatherDTO? {
+                          excludeInfo: String = "exclude=flag,hourly") {
         let basicWeatherUrl = "\(url)/\(key)/\(latitude),\(longitude)"
-       
         var urlComponents = URLComponents(string: basicWeatherUrl)!
         urlComponents.query = "\(excludeInfo)&lang=\(language)&units=\(units)"
-        
         guard let componentURL = urlComponents.url else{
-            return nil
+            return 
         }
-       
         dataTask = defaultSession.dataTask(with: componentURL) { [weak self] data, response, error in
             defer {
                self?.dataTask = nil
             }
-            if let responseError = error {
-                      print("network error occured : \(responseError)")
+            if error != nil {
+                
             }else if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
                 let decoder = JSONDecoder.init()
                 guard let decodedJSONObject = try? decoder.decode(WeatherDTO.self, from: data) else {
-                   print("data : \(data)")
-                   print("convert error ")
-                   return
+
+                    return
                 }
                 self?.weatherDTO = decodedJSONObject
-                let encoder = JSONEncoder()
-                encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-                do{
-                    let jsonData = try encoder.encode(self?.weatherDTO!)
-                    if let jsonString = String(data: jsonData, encoding: .utf8) {
-                          print(jsonString)
-                    }
-                }catch{
-                    print("encode error")
+                guard let weatherInfo = self?.weatherDTO else {
+                    return
                 }
+                NotificationCenter.default.post(name: .CompleteReceivingWeatherInfo, object: weatherInfo)
            }
        }
        dataTask?.resume()
-       return weatherDTO
    }
+}
+
+extension Notification.Name {
+    static var CompleteReceivingWeatherInfo = Notification.Name(rawValue: "CompleteReceivingWeatherInfo")
 }

@@ -10,12 +10,19 @@ import Foundation
 
 // MARK: WeatherDTO
 struct WeatherDTO: Codable {
-    var latitude, longitude: Double
-    var timezone: String
-    var currently: Currently?
-    var daily: Daily?
-    var hourly: Hourly?
-    var offset: Int
+    private var latitude, longitude: Double
+    private var timezone: String
+    private var currently: Currently?
+    private var daily: Daily?
+    private var hourly: Hourly?
+    private var offset: Int
+    
+    func buildCurrentWeatherInfo() -> CurrentlyWeatherVO?{
+        guard let currently = self.currently else{
+            return nil
+        }
+        return CurrentlyWeatherVO.init(currently: currently)
+    }
 }
 
 

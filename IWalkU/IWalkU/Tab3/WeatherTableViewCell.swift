@@ -10,6 +10,11 @@ import UIKit
 
 class WeatherTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var leftTitle: UILabel!
+    @IBOutlet weak var leftSubtitle: UILabel!
+    @IBOutlet weak var rightTitle: UILabel!
+    @IBOutlet weak var rightSubtitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
