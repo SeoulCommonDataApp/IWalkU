@@ -11,6 +11,8 @@ import Foundation
 enum ApiURL: String, CustomStringConvertible {
     case darkSkyWeather = "https://api.darksky.net/forecast"
     case SeoulAirQuality = "http://openapi.seoul.go.kr:8088"
+    case darkSkyWeatherKey = "sampelb"
+    case SeoulAirQualityKey = "samplea"
     var description: String {
         return self.rawValue
     }
