@@ -7,69 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4D4B74D8-4440-4D69-AC26-BA20C7BECC42"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "Yes"
-            filePath = "IWalkU/Model/Weather/DarkSkyWeatherDTO/WeatherReceiver.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "recevieWeatherDTO(_:key:latitude:longitude:language:units:excludeInfo:)"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "&quot;network error occured&quot; "
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "po error">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-            <Locations>
-               <Location
-                  uuid = "4D4B74D8-4440-4D69-AC26-BA20C7BECC42 - d938cba8fe3e00fa"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in IWalkU.WeatherReceiver.recevieWeatherDTO(_: Swift.String, key: Swift.String, latitude: Swift.Double, longitude: Swift.Double, language: Swift.String, units: Swift.String, excludeInfo: Swift.String) -&gt; ()"
-                  moduleName = "IWalkU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hw/CodeSquard/IWalkU/IWalkU/IWalkU/Model/Weather/DarkSkyWeatherDTO/WeatherReceiver.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "384">
-               </Location>
-               <Location
-                  uuid = "4D4B74D8-4440-4D69-AC26-BA20C7BECC42 - d938cba8fe3e00fa"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in IWalkU.WeatherReceiver.recevieWeatherDTO(_: Swift.String, key: Swift.String, latitude: Swift.Double, longitude: Swift.Double, language: Swift.String, units: Swift.String, excludeInfo: Swift.String) -&gt; ()"
-                  moduleName = "IWalkU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hw/CodeSquard/IWalkU/IWalkU/IWalkU/Model/Weather/DarkSkyWeatherDTO/WeatherReceiver.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "403">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "118E407A-221E-4009-A112-FE90780AB885"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -77,8 +14,8 @@
             filePath = "IWalkU/Tab3/UIWeatherViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
             <Actions>
@@ -116,46 +53,6 @@
                   ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
                   <ActionContent
                      consoleCommand = "po itemIndex*2+1">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3C31BEF1-734A-4D8E-95A0-FA025FF80585"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IWalkU/Tab3/UIWeatherViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "displayMainWeatherData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "33CDB2A0-0E41-4020-A65E-58C2A1E1FED1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "Yes"
-            filePath = "IWalkU/Model/Weather/SeoulAirQualityInfoDTO/SeoulAirQualityReceiver.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "recevieAirQualityInfo(_:key:type:service:start:end:)"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "po responseError.localizedDescription">
                   </ActionContent>
                </BreakpointActionProxy>
             </Actions>

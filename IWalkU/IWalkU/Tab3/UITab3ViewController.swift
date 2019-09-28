@@ -8,12 +8,10 @@
 
 import UIKit
 
-@available(iOS 13.0, *)
 class UITab3ViewController: UIViewController {
-
     @IBAction func touchUpMoreButton(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "Weather", bundle: nil)
-        guard let detailWeatherViewController = storyboard.instantiateViewController(identifier: "UIWeatherViewController") as? UIWeatherViewController else {
+        guard let detailWeatherViewController = storyboard.instantiateViewController(withIdentifier: "UIWeatherViewController") as? UIWeatherViewController else {
             return
         }
         present(detailWeatherViewController, animated: true, completion: nil)
