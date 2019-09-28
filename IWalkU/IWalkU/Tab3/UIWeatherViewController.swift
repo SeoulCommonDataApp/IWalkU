@@ -62,6 +62,11 @@ class UIWeatherViewController: UIViewController {
         weatherReceiver = WeatherReceiver.init()
         weatherReceiver.recevieWeatherDTO(key: ApiURL.darkSkyWeatherKey.description)
     }
+    private func configureAirPollutionData(){
+        airQualityReceiver = SeoulAirQualityReceiver.init()
+        airQualityReceiver.recevieAirQualityInfo(key: ApiURL.darkSkyWeatherKey.description)
+    }
+    
 }
 
 extension UIWeatherViewController: UITableViewDataSource {
