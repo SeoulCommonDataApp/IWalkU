@@ -43,10 +43,10 @@ class CurrentlyWeatherVO{
     }
     
     private func buildMainWeatherData(_ dictionary: [String: Any]){
-        guard let time = dictionary["time"] as? String,
-            let summary = dictionary["summary"] as? String,
-            let temperature = dictionary["temperature"] as? Double,
-            let icon = dictionary["icon"] as? String else {
+        guard let time = dictionary[WeatherKeys.time] as? String,
+            let summary = dictionary[WeatherKeys.summary] as? String,
+            let temperature = dictionary[WeatherKeys.temperature] as? Double,
+            let icon = dictionary[WeatherKeys.icon] as? String else {
             return
         }
         mainWeatherData = MainWeatherData.init(time: time,

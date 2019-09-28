@@ -17,11 +17,14 @@ class UIWeatherViewController: UIViewController {
     
     @IBOutlet weak var weatherTableView: UITableView!
     private var weatherReceiver: WeatherReceiver!
+    private var airQualityReceiver: SeoulAirQualityReceiver!
     private var currentWeatherInfo: CurrentlyWeatherVO!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableSettings()
         self.weatherTableView.dataSource = self
+        
         configureWeatherData()
         NotificationCenter.default.addObserver(self, selector: #selector(convertReceivingWeatherDTOToVO), name: .CompleteReceivingWeatherInfo, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(convertReceivingWeatherDTOToVO), name: .DisplayMainWeatherData, object: nil)
@@ -29,6 +32,10 @@ class UIWeatherViewController: UIViewController {
     // MARK : @IBAction
     @IBAction func closeVC(){
         self.dismiss(animated: true)
+    }
+    
+    private func configureTableSettings(){
+        weatherTableView.rowHeight = 80
     }
     
     @objc func convertReceivingWeatherDTOToVO(_ notification: Notification ){
@@ -41,16 +48,15 @@ class UIWeatherViewController: UIViewController {
 
     private func displayMainWeatherData(){
         DispatchQueue.main.async { [weak self] in
-                  self?.currentWeatherInfo.displayMainData { (mainData: CurrentlyWeatherVO.MainWeatherData) in
-                      self?.timeLabel.text = mainData.time
-                      self?.timeZoneLabel.text = mainData.timeZone
-                      self?.temperatureLabel.text = String(format:"%.1f", mainData.celciusTemperature)
-                      self?.weatherSummaryLabel.text = mainData.summary
-                  }
-                  self?.weatherTableView.reloadData()
-              }
+            self?.currentWeatherInfo.displayMainData { (mainData: CurrentlyWeatherVO.MainWeatherData) in
+                  self?.timeLabel.text = mainData.time
+                  self?.timeZoneLabel.text = mainData.timeZone
+                  self?.temperatureLabel.text = String(format:"%.1f", mainData.celciusTemperature)
+                  self?.weatherSummaryLabel.text = mainData.summary
+            }
+            self?.weatherTableView.reloadData()
+        }
     }
-    
     
     private func configureWeatherData() {
         weatherReceiver = WeatherReceiver.init()
@@ -71,17 +77,23 @@ extension UIWeatherViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard currentWeatherInfo != nil else {
-            return UITableViewCell()
+            return WeatherTableViewCell()
         }
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "weatherTableViewCell") as! WeatherTableViewCell
         let elementPair = currentWeatherInfo.getInfoPairFromIndex(indexPath.item)
-        tableViewCell.leftTitle.text = elementPair[0].key
-        tableViewCell.leftSubtitle.text = castValueDataToStringType(elementPair[0].value)
-        if elementPair.count == 2{
-            tableViewCell.rightTitle.text = elementPair[1].key
-            tableViewCell.rightSubtitle.text = castValueDataToStringType(elementPair[1].value)
-        }
+        addUnitsOnSubtitle(tableViewCell: tableViewCell, pair: elementPair)
         return tableViewCell
+    }
+    
+    private func addUnitsOnSubtitle( tableViewCell : WeatherTableViewCell, pair:  [(key: String, value: Any)] ){
+        tableViewCell.leftTitle.text = pair[0].key
+        let addedUnitsOnLeft = WeatherKeys.addUnits(key: pair[0].key, value: castValueDataToStringType(pair[0].value))
+        tableViewCell.leftSubtitle.text = addedUnitsOnLeft
+        if pair.count == 2{
+            tableViewCell.rightTitle.text = pair[1].key
+            let addedUnitsOnRight = WeatherKeys.addUnits(key: pair[1].key, value: castValueDataToStringType(pair[1].value))
+            tableViewCell.rightSubtitle.text = addedUnitsOnRight
+        }
     }
     
     private func clearTableViewCell(_ tableViewCell: WeatherTableViewCell) {

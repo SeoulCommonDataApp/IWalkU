@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Units: String{
+enum WeightsAndMeasureUnits: String{
     case auto
     case ca
     case uk2

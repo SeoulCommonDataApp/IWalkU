@@ -20,6 +20,8 @@
 		C58E2E66233DF03800560971 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58E2E65233DF03800560971 /* WeatherTableViewCell.swift */; };
 		C58E2E6B233E0D4B00560971 /* UnixTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58E2E6A233E0D4B00560971 /* UnixTimeFormatter.swift */; };
 		C58E2E6E233EEFF000560971 /* CurrentlyWeatherVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58E2E6D233EEFF000560971 /* CurrentlyWeatherVO.swift */; };
+		C58E2E70233F3B1A00560971 /* WeatherKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58E2E6F233F3B1A00560971 /* WeatherKeys.swift */; };
+		C58E2E72233F532200560971 /* AirPollutionKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58E2E71233F532200560971 /* AirPollutionKeys.swift */; };
 		C5E76FA8233CB34000CB72FB /* SeoulMainParkList.json in Resources */ = {isa = PBXBuildFile; fileRef = C5E76FA7233CB34000CB72FB /* SeoulMainParkList.json */; };
 		C5E76FB7233DDE7A00CB72FB /* UIWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FB5233DDE7A00CB72FB /* UIWeatherViewController.swift */; };
 		C5E76FBA233DDFB600CB72FB /* WeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FB9233DDFB600CB72FB /* WeatherDTO.swift */; };
@@ -31,7 +33,7 @@
 		C5E76FCC233DE2C500CB72FB /* ApiURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FCB233DE2C500CB72FB /* ApiURL.swift */; };
 		C5E76FCE233DE55D00CB72FB /* WeatherReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FCD233DE55D00CB72FB /* WeatherReceiver.swift */; };
 		C5E76FD2233DE66900CB72FB /* SeoulWeatherQualityAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FD1233DE66900CB72FB /* SeoulWeatherQualityAPIs.swift */; };
-		C5E76FD6233DE72300CB72FB /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FD5233DE72300CB72FB /* Units.swift */; };
+		C5E76FD6233DE72300CB72FB /* WeightsAndMeasureUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FD5233DE72300CB72FB /* WeightsAndMeasureUnits.swift */; };
 		C5E76FD8233DE72B00CB72FB /* SeoulStandardCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E76FD7233DE72B00CB72FB /* SeoulStandardCoordinate.swift */; };
 		C5E76FDA233DEA5B00CB72FB /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E76FD9233DEA5B00CB72FB /* Weather.storyboard */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,8 @@
 		C58E2E65233DF03800560971 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		C58E2E6A233E0D4B00560971 /* UnixTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixTimeFormatter.swift; sourceTree = "<group>"; };
 		C58E2E6D233EEFF000560971 /* CurrentlyWeatherVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentlyWeatherVO.swift; sourceTree = "<group>"; };
+		C58E2E6F233F3B1A00560971 /* WeatherKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKeys.swift; sourceTree = "<group>"; };
+		C58E2E71233F532200560971 /* AirPollutionKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPollutionKeys.swift; sourceTree = "<group>"; };
 		C5E76FA7233CB34000CB72FB /* SeoulMainParkList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SeoulMainParkList.json; sourceTree = "<group>"; };
 		C5E76FB5233DDE7A00CB72FB /* UIWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWeatherViewController.swift; sourceTree = "<group>"; };
 		C5E76FB9233DDFB600CB72FB /* WeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDTO.swift; sourceTree = "<group>"; };
@@ -63,7 +67,7 @@
 		C5E76FCB233DE2C500CB72FB /* ApiURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiURL.swift; sourceTree = "<group>"; };
 		C5E76FCD233DE55D00CB72FB /* WeatherReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherReceiver.swift; sourceTree = "<group>"; };
 		C5E76FD1233DE66900CB72FB /* SeoulWeatherQualityAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulWeatherQualityAPIs.swift; sourceTree = "<group>"; };
-		C5E76FD5233DE72300CB72FB /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		C5E76FD5233DE72300CB72FB /* WeightsAndMeasureUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightsAndMeasureUnits.swift; sourceTree = "<group>"; };
 		C5E76FD7233DE72B00CB72FB /* SeoulStandardCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulStandardCoordinate.swift; sourceTree = "<group>"; };
 		C5E76FD9233DEA5B00CB72FB /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,8 +200,10 @@
 		C5E76FD0233DE63C00CB72FB /* WeatherEnums */ = {
 			isa = PBXGroup;
 			children = (
-				C5E76FD5233DE72300CB72FB /* Units.swift */,
+				C5E76FD5233DE72300CB72FB /* WeightsAndMeasureUnits.swift */,
 				C5E76FD7233DE72B00CB72FB /* SeoulStandardCoordinate.swift */,
+				C58E2E6F233F3B1A00560971 /* WeatherKeys.swift */,
+				C58E2E71233F532200560971 /* AirPollutionKeys.swift */,
 			);
 			path = WeatherEnums;
 			sourceTree = "<group>";
@@ -283,9 +289,10 @@
 				C5E76FBE233DDFD800CB72FB /* Daily.swift in Sources */,
 				C5E76FCE233DE55D00CB72FB /* WeatherReceiver.swift in Sources */,
 				C5E76FCC233DE2C500CB72FB /* ApiURL.swift in Sources */,
-				C5E76FD6233DE72300CB72FB /* Units.swift in Sources */,
+				C5E76FD6233DE72300CB72FB /* WeightsAndMeasureUnits.swift in Sources */,
 				C5E76FB7233DDE7A00CB72FB /* UIWeatherViewController.swift in Sources */,
 				C5E76FBA233DDFB600CB72FB /* WeatherDTO.swift in Sources */,
+				C58E2E70233F3B1A00560971 /* WeatherKeys.swift in Sources */,
 				C58E2E64233DEC8F00560971 /* UITab3ViewController.swift in Sources */,
 				C58DC2A4232E4C17008D156D /* ViewController.swift in Sources */,
 				C5E76FC7233DE06200CB72FB /* SeoulAirPollutionInfo.swift in Sources */,
@@ -297,6 +304,7 @@
 				33E326E6233C8533006E98AC /* SeoulMainPark.swift in Sources */,
 				33E326EB233C8D58006E98AC /* SeoulMainParkDataSource.swift in Sources */,
 				C58E2E6B233E0D4B00560971 /* UnixTimeFormatter.swift in Sources */,
+				C58E2E72233F532200560971 /* AirPollutionKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -428,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

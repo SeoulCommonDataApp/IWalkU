@@ -26,11 +26,11 @@ struct Currently: Codable {
     
     func convertDtoToMainData() -> [String: Any]{
         var dictionary = [String: Any]()
-        dictionary.updateValue(UnixTimeFormatter.convertUnixTimeToKoreanFormat(time), forKey: "time")
-        dictionary.updateValue(summary, forKey: "summary")
-        dictionary.updateValue(icon, forKey: "icon")
+        dictionary.updateValue(UnixTimeFormatter.convertUnixTimeToKoreanFormat(time), forKey: WeatherKeys.time)
+        dictionary.updateValue(summary, forKey: WeatherKeys.summary)
+        dictionary.updateValue(icon, forKey: WeatherKeys.icon)
         if let temperature = self.temperature {
-            dictionary.updateValue(temperature, forKey: "temperature")
+            dictionary.updateValue(temperature, forKey: WeatherKeys.temperature)
         }
         return dictionary
     }
@@ -38,32 +38,26 @@ struct Currently: Codable {
     func convertDtoToDetailVO() -> [String: Any]{
         var dictionary = [String: Any]()
         
-        if let nearestStormDistance = self.nearestStormDistance {
-            dictionary.updateValue(nearestStormDistance, forKey: "돌풍예보")
-        }
-        if  let nearestStormBearing = self.nearestStormBearing {
-            dictionary.updateValue(nearestStormBearing, forKey: "nearestStormBearing")
-        }
         if let precipIntensity = self.precipIntensity, let precipProbability = self.precipProbability {
-            dictionary.updateValue(precipIntensity, forKey: "강우/적설량")
-            dictionary.updateValue(precipProbability, forKey: "비/눈 올 확률")
+            dictionary.updateValue(precipIntensity, forKey: WeatherKeys.precipIntensity)
+            dictionary.updateValue(precipProbability, forKey: WeatherKeys.precipProbability)
         }else if let precipIntensityError = precipIntensityError {
-            dictionary.updateValue(precipIntensityError, forKey: "precipIntensityError")
+            dictionary.updateValue(precipIntensityError, forKey: WeatherKeys.precipIntensityError)
         }
         if let precipType = self.precipType {
-            dictionary.updateValue(precipType, forKey: "강우/강설 유형")
+            dictionary.updateValue(precipType, forKey: WeatherKeys.precipType)
         }
         if let apparentTemperature = self.apparentTemperature, let uvIndex = self.uvIndex  {
-            dictionary.updateValue(apparentTemperature, forKey: "체감온도")
-            dictionary.updateValue(uvIndex, forKey: "자외선지수")
+            dictionary.updateValue(apparentTemperature, forKey: WeatherKeys.apparentTemperature)
+            dictionary.updateValue(uvIndex, forKey: WeatherKeys.uvIndex)
         }
         if let visibility = self.visibility {
-            dictionary.updateValue(visibility, forKey: "시야")
+            dictionary.updateValue(visibility, forKey: WeatherKeys.visibility)
         }
         if let windBearing = windBearing, let windGust = windGust, let windSpeed = windSpeed{
-            dictionary.updateValue(windBearing, forKey: "windBearing")
-            dictionary.updateValue(windGust, forKey: "windGust")
-            dictionary.updateValue(windSpeed, forKey: "풍속")
+            dictionary.updateValue(windBearing, forKey: WeatherKeys.windBearing)
+            dictionary.updateValue(windGust, forKey: WeatherKeys.windGust)
+            dictionary.updateValue(windSpeed, forKey: WeatherKeys.windSpeed)
         }
         return dictionary
     }
