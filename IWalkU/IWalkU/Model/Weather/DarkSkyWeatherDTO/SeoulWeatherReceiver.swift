@@ -8,10 +8,10 @@
 
 import Foundation
 
-class WeatherReceiver{
+class SeoulWeatherReceiver{
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
-    var weatherDTO: WeatherDTO!
+    var weatherDTO: SeoulWeatherDTO!
 
     func recevieWeatherDTO(_ url: String = ApiURL.darkSkyWeather.description,
                           key: String,
@@ -39,7 +39,7 @@ class WeatherReceiver{
                 NotificationCenter.default.post(name: .NetworkErrorReceivingWeatherInfo, object: nil, userInfo: info)
             }else if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
                 let decoder = JSONDecoder.init()
-                guard let decodedJSONObject = try? decoder.decode(WeatherDTO.self, from: data) else {
+                guard let decodedJSONObject = try? decoder.decode(SeoulWeatherDTO.self, from: data) else {
                     return
                 }
                 self?.weatherDTO = decodedJSONObject

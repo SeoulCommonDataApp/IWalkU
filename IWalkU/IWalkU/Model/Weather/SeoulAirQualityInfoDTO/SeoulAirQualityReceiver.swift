@@ -11,15 +11,15 @@ import Foundation
 class SeoulAirQualityReceiver {
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
-    var airQualityInfo: SeoulAirPollutionInfo!
+    var airQualityInfo: SeoulAirPollutionDTO!
     func recevieAirQualityInfo(_ url: String = ApiURL.SeoulAirQuality.description,
                                 key: String,
                                 type: String = "\(SeoulAirQualityAPIs.type.description)",
                                 service: String = "\(SeoulAirQualityAPIs.service.description)",
-                                start: Int = 1, end: Int = 5 ) {
+                                start: Int = 1, end: Int = 5) {
         let airQualityUrl: String = "\(url)/\(key)/\(type)/\(service)/\(start)/\(end)"
         let urlComponents = URLComponents(string: airQualityUrl)!
-        guard let componentURL = urlComponents.url else{
+        guard let componentURL = urlComponents.url else {
             return
         }
         receiveDataFromURL(componentURL)
@@ -35,11 +35,17 @@ class SeoulAirQualityReceiver {
                 NotificationCenter.default.post(name: .NetworkErrorReceivingAirQualityInfo, object: nil, userInfo: info)
             }else if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
                 let decoder = JSONDecoder.init()
-                guard let decodedJSONObject = try? decoder.decode(SeoulAirPollutionInfo.self, from: data) else {
+                guard let decodedJSONObject = try? decoder.decode(SeoulAirPollutionDTO.self, from: data) else {
                     return
                 }
                 self?.airQualityInfo = decodedJSONObject
-                NotificationCenter.default.post(name: .CompleteReceivingAirQualityInfo, object: self?.airQualityInfo)
+                guard let rowData = self?.airQualityInfo.retrieveRepresentialData() else {
+                    return
+                }
+                let keyValuePairList = rowData.convertPropertiesToKeyValueList()
+                let airQualityRowDataList = AirQualityRowDataList.init(keyValuePairList)
+                
+                NotificationCenter.default.post(name: .CompleteReceivingAirQualityInfo, object: airQualityRowDataList)
             }
         }
         dataTask?.resume()

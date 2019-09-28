@@ -78,6 +78,4 @@ class CurrentlyWeatherVO{
     
 }
 
-extension Notification.Name {
-    static let DisplayMainWeatherData = Notification.Name(rawValue: "DisplayMainWeatherData")
-}
+

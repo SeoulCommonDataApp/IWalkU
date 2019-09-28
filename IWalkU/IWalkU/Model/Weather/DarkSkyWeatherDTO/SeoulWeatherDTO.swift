@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: WeatherDTO
-struct WeatherDTO: Codable {
+struct SeoulWeatherDTO: Codable {
     private var latitude, longitude: Double
     private var timezone: String
     private var currently: Currently?
