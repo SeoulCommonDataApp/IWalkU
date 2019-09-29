@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AF86880375F91EDF0D89E0C /* Pods_IWalkU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1526F4A2361D07D3E42E1CD /* Pods_IWalkU.framework */; };
 		33E326E6233C8533006E98AC /* SeoulMainPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E326E5233C8533006E98AC /* SeoulMainPark.swift */; };
 		33E326E8233C88E9006E98AC /* ParkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E326E7233C88E9006E98AC /* ParkViewController.swift */; };
 		33E326EB233C8D58006E98AC /* SeoulMainParkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E326EA233C8D58006E98AC /* SeoulMainParkDataSource.swift */; };
@@ -45,6 +46,7 @@
 		33E326E7233C88E9006E98AC /* ParkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkViewController.swift; sourceTree = "<group>"; };
 		33E326EA233C8D58006E98AC /* SeoulMainParkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulMainParkDataSource.swift; sourceTree = "<group>"; };
 		33E326EC233C9058006E98AC /* ParkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTableViewCell.swift; sourceTree = "<group>"; };
+		88F434C1B462C0C1E971F846 /* Pods-IWalkU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IWalkU.debug.xcconfig"; path = "Target Support Files/Pods-IWalkU/Pods-IWalkU.debug.xcconfig"; sourceTree = "<group>"; };
 		C58DC29E232E4C17008D156D /* IWalkU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IWalkU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58DC2A1232E4C17008D156D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C58DC2A3232E4C17008D156D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 		C5E76FD5233DE72300CB72FB /* WeightsAndMeasureUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightsAndMeasureUnits.swift; sourceTree = "<group>"; };
 		C5E76FD7233DE72B00CB72FB /* SeoulStandardCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulStandardCoordinate.swift; sourceTree = "<group>"; };
 		C5E76FD9233DEA5B00CB72FB /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		C6539F1E30F021BC15B3A5FB /* Pods-IWalkU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IWalkU.release.xcconfig"; path = "Target Support Files/Pods-IWalkU/Pods-IWalkU.release.xcconfig"; sourceTree = "<group>"; };
+		F1526F4A2361D07D3E42E1CD /* Pods_IWalkU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IWalkU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +85,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF86880375F91EDF0D89E0C /* Pods_IWalkU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18DF24CFF762EA5C8C332312 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1526F4A2361D07D3E42E1CD /* Pods_IWalkU.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		33E326E4233C8516006E98AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +118,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BD3B4E6EEF001C65609A6C6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88F434C1B462C0C1E971F846 /* Pods-IWalkU.debug.xcconfig */,
+				C6539F1E30F021BC15B3A5FB /* Pods-IWalkU.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C58DC295232E4C17008D156D = {
 			isa = PBXGroup;
 			children = (
 				C58DC2A0232E4C17008D156D /* IWalkU */,
 				C58DC29F232E4C17008D156D /* Products */,
+				BD3B4E6EEF001C65609A6C6E /* Pods */,
+				18DF24CFF762EA5C8C332312 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,6 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C58DC2B0232E4C1B008D156D /* Build configuration list for PBXNativeTarget "IWalkU" */;
 			buildPhases = (
+				AF140A631107CD26BB24A855 /* [CP] Check Pods Manifest.lock */,
 				C58DC29A232E4C17008D156D /* Sources */,
 				C58DC29B232E4C17008D156D /* Frameworks */,
 				C58DC29C232E4C17008D156D /* Resources */,
@@ -281,6 +307,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AF140A631107CD26BB24A855 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IWalkU-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C58DC29A232E4C17008D156D /* Sources */ = {
@@ -456,6 +507,7 @@
 		};
 		C58DC2B1232E4C1B008D156D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88F434C1B462C0C1E971F846 /* Pods-IWalkU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -474,6 +526,7 @@
 		};
 		C58DC2B2232E4C1B008D156D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6539F1E30F021BC15B3A5FB /* Pods-IWalkU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

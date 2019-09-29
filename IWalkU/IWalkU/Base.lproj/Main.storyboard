@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FX0-vh-4iF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FX0-vh-4iF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -803,17 +803,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lfn-qj-wGs" id="Z99-pt-fbc">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="382"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="22H-dy-Bsj">
-                                                    <rect key="frame" x="0.0" y="11" width="374" height="382"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="22H-dy-Bsj" firstAttribute="width" secondItem="Z99-pt-fbc" secondAttribute="width" id="NgL-Cs-nJ1"/>
-                                                <constraint firstItem="22H-dy-Bsj" firstAttribute="top" secondItem="Z99-pt-fbc" secondAttribute="topMargin" id="SbP-rg-9KF"/>
-                                                <constraint firstItem="22H-dy-Bsj" firstAttribute="height" secondItem="Z99-pt-fbc" secondAttribute="height" id="cY5-01-3Cl"/>
-                                                <constraint firstItem="22H-dy-Bsj" firstAttribute="centerX" secondItem="Z99-pt-fbc" secondAttribute="centerX" id="gtG-Y1-bvO"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -838,7 +827,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ga9-Db-Buh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1962" y="-926"/>
+            <point key="canvasLocation" x="-1962.3188405797102" y="-926.11607142857133"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="FMy-Ba-vdu">
@@ -885,11 +874,11 @@
                                 <rect key="frame" x="22" y="99" width="370" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vj6-z3-yEq">
-                                <rect key="frame" x="20" y="155" width="372" height="174"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCH-XZ-q8x" customClass="MKMapView">
+                                <rect key="frame" x="22" y="155" width="372" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.062745098040000002" green="1" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92540278710000001" blue="0.13161068640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
