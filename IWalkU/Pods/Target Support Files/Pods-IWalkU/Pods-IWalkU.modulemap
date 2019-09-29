@@ -1,0 +1,6 @@
+framework module Pods_IWalkU {
+  umbrella header "Pods-IWalkU-umbrella.h"
+
+  export *
+  module * { export * }
+}
